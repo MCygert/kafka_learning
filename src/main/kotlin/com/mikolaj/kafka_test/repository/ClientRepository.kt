@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface ClientRepository : CrudRepository<Client, UUID>
+interface ClientRepository : CrudRepository<Client, UUID> {
+    fun findClientByGlobalId(globalId: String): Client?
+}

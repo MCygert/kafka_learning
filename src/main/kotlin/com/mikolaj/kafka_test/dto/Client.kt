@@ -8,7 +8,7 @@ import java.util.UUID
 
 @Entity
 @Table(name = "clients")
-data class Client(
+class Client(
     @Id
     val id: UUID,
     @Column(name = "global_id")

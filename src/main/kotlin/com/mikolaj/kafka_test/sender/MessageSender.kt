@@ -14,6 +14,7 @@ class MessageSender(
     @GetMapping("/order")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun sendOrder() {
+        println("SENDING ORDER")
         messageProducer.sendOrder()
     }
 

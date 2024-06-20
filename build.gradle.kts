@@ -3,6 +3,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.5"
     kotlin("jvm") version "1.9.24"
     kotlin("plugin.spring") version "1.9.24"
+    kotlin("plugin.jpa") version "1.4.32"
 }
 
 group = "com.mikolaj"
@@ -28,7 +29,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.boot:spring-boot-starter-jdbc:3.3.0")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.3.0")
+    implementation("org.springframework.boot:spring-boot-starter-mustache")
     implementation("org.springframework.kafka:spring-kafka")
+    implementation("com.h2database:h2:2.1.212")
+    runtimeOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testImplementation("org.springframework.kafka:spring-kafka-test")
